@@ -17,7 +17,7 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka"   %% "akka-actor"     % akkaV,
   "com.typesafe.akka"   %% "akka-slf4j"     % akkaV,
   "com.typesafe.slick"  %% "slick"          % slickV,
-//  "org.slf4j"           % "slf4j-nop"       % "1.6.4", // need this according to http://slick.lightbend.com/doc/3.1.1/gettingstarted.html
+  "org.slf4j"           % "slf4j-nop"       % "1.6.4", // need this according to http://slick.lightbend.com/doc/3.1.1/gettingstarted.html
   "mysql"               % "mysql-connector-java" % "5.1.38",
   "net.liftweb"         %% "lift-json"      % "2.6+",
   "ch.qos.logback"      % "logback-classic" % "1.1.7"

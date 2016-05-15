@@ -38,3 +38,7 @@ project/plugins/project/
 .idea/scala_compiler.xml
 
 .idea/vcs.xml
+
+.ensime
+
+.ensime_cache/
