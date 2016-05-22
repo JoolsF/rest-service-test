@@ -9,7 +9,7 @@ import scala.concurrent.duration._
 /**
  *
  */
-class CustomerDAO {
+class PersonDAO {
   val db = Database.forConfig("db")
 
   val people = TableQuery[PersonTable]
@@ -19,4 +19,7 @@ class CustomerDAO {
   val future = db.run(action)
 
   val result = Await.result(future, 2 seconds)
+
+println("running")
+
 }

@@ -27,4 +27,8 @@ final class PersonTable(tag: Tag) extends Table[Person](tag, "person"){
 
   def * = (id, firstName, lastName) <> (Person.tupled, Person.unapply)
 
+  // val findById = for {
+  //   id <- Parameters[Long]
+  // } yield id
+
 }

@@ -3,7 +3,7 @@ package boot
 import akka.actor.{ActorSystem, Props}
 import akka.io.IO
 import config.Configuration
-
+import dao._
 
 /**
   * Trait App is mixed to turn Boot object into executable program whereas Configuration trait
@@ -19,8 +19,10 @@ import spray.can.Http
 
 object Boot extends App with Configuration {
 
+new PersonDAO()
+
   // create an actor system for application
-  implicit val system = ActorSystem("rest-service-example")
+  //implicit val system = ActorSystem("rest-service-example")
 
   // create and start rest service actor
 //  val restService = system.actorOf(Props[RestServiceActor], "rest-endpoint")
