@@ -12,13 +12,14 @@ import scala.concurrent.duration._
 class PersonDAO {
   val db = Database.forConfig("db")
 
+//
   val people = TableQuery[PersonTable]
-
+////
   val action: DBIO[Unit] = people.schema.create
-
+////
   val future = db.run(action)
-
-  val result = Await.result(future, 2 seconds)
+////
+  val result = Await.result(future, 5 seconds)
 
 println("running")
 
