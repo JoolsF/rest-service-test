@@ -7,7 +7,7 @@ import slick.driver.MySQLDriver.api._
   * http://slick.lightbend.com/doc/2.0.0-M3/lifted-embedding.html
   */
 final case class Person (
-  id: Long,
+  id: Long = 0L,
   firstName: String,
   lastName: String) {
 
@@ -21,14 +21,14 @@ final case class Person (
 
 final class PersonTable(tag: Tag) extends Table[Person](tag, "person"){
 
-  def id      = column[Long]("id", O.PrimaryKey, O.AutoInc)
+  def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   def firstName  = column[String]("firstName")
   def lastName = column[String]("lastName")
 
   def * = (id, firstName, lastName) <> (Person.tupled, Person.unapply)
 
-  // val findById = for {
-  //   id <- Parameters[Long]
-  // } yield id
+//   val findById = for {
+//     id <- Parameters[Long]
+//   } yield id
 
 }
